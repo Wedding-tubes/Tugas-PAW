@@ -1,12 +1,12 @@
 language: ruby
 rvm:
-  - "2.3.3"
+  - "2.2.0"
 env:
   - DB=mysql
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
-  - bundle exec rake
+  - bundle exec rspec spec/
 before_script:
-  - cp config/database.travis.yml config/database.yml
+  - mysql -e 'create database myapp_test'
 bundle_args: --binstubs=./bundler_stubs
