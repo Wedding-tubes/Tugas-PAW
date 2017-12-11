@@ -5,7 +5,7 @@ env:
   - RAILS_ENV=test
 before_script:
   - "mysql -e 'create database my_app_test;'"
-  - "cp ./.travis.database.yml ./config/database.yml"
+  - "cp config/.travis.database.yml config/database.yml"
 script: 
   - bundle exec rake db:schema:load
   - bundle exec rake db:test:prepare
