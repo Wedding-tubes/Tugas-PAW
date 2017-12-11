@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wedding</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css">
+    	
+    </style>
+
+  </head>
+
+  <body>
+    
+      <div class="container-fluid text-center bg-light" style="padding: 5px 0">
+           <!--<h3 style="font-family: georgia, serif;"><em>~Nidul Wedding~</em></h3>-->
+          <div class="logo">
+            <img <%= image_tag("logo.gif") %>
+          </div>
+      </div>
+    
+    <% if user = user_login %>
+      <nav class="navbar navbar-expand-md navbar-light" style="background-color:rgba(255,255,255,0.5); border: none; ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <!-- Navbar links -->
+     <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+        <ul class="navbar-nav" style=" width: 170px; margin-left: 43%;">
+         <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="background-color:rgba(255,255,255,0.5); border: none; color: #000;" >
+                  Paket
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="wedding">Paket Wedding</a>
+                  <a class="dropdown-item" href="catering">Paket Catering</a>
+                  
+                </div>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="background-color:rgba(255,255,255,0.5); border: none; color: #000;">
+                  Kategori
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="dekorasi">Dekorasi</a>
+                  <a class="dropdown-item" href="#">Make Up</a>
+                  <a class="dropdown-item" href="#">Busana</a>
+                  <a class="dropdown-item" href="catering">Catering</a>
+                  <a class="dropdown-item" href="#">Suvenir</a>
+                </div>
+              </li>      
+        </ul>
+        <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="lihat_keranjang" style="color: #fff">
+                  <div class="keran">
+                    <img <%=image_tag("keranjang.gif") %>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  <%= user.email %>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#"><%= link_to "Keluar", logout_path, method: :delete, class:"nav-link", style:"color:#000"%></a>
+                </div>
+              </li>
+        </ul>
+
+      </div>  
+    </nav> 
+
+    <% else %>
+      <nav class="navbar navbar-expand-md navbar-dark" style="background: #f28c8c">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+       <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="home" style="color: #fff">Home</a>
+              </li>
+             
+           <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: #fff">
+                    Paket
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="wedding">Paket Wedding</a>
+                    <a class="dropdown-item" href="catering">Paket Catring</a>
+                    
+                  </div>
+                </li>
+               
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: #fff">
+                    Kategori
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="dekorasi">Dekorasi</a>
+                    <a class="dropdown-item" href="#">Make Up</a>
+                    <a class="dropdown-item" href="#">Busana</a>
+                    <a class="dropdown-item" href="#">Catring</a>
+                    <a class="dropdown-item" href="#">Suvenir</a>
+                  </div>
+                </li>
+              
+                <li class="nav-item nav-right">
+                  <a class="nav-link" href="#" style="color: #fff">About</a>
+                </li>        
+          </ul>
+
+          <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="login" class="nav-link" style="color: #fff">Sign in</a>
+                </li>
+                <li class="nav-item">
+                    <a href="users/new" class="nav-link" style="color: #fff">Sign up</a>
+                </li>
+          </ul>
+        </div>  
+      </nav>
+    <% end %>
+
+    <%= yield %>
+    
+  </body>
+</html>

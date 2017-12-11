@@ -1,0 +1,2 @@
+class Keranjang < ApplicationRecord
+end

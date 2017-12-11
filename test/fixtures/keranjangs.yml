@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  namauser: MyString
+  kategori: MyString
+  kodepaket: MyString
+  jenispaket: MyString
+
+two:
+  namauser: MyString
+  kategori: MyString
+  kodepaket: MyString
+  jenispaket: MyString

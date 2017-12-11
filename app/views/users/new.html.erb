@@ -1,0 +1,45 @@
+<div class="form"> 	
+	<h2 style="color: #624b4b">Daftar Member</h2><hr>
+	
+	<%= form_for(@user, url: {action: "create"}, method: "post") do |f| %>
+	<div class="form-group">
+		<%= f.label :Nama %>
+		<%= f.text_field :nama, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Jenis_Kelamin, style:'float:left'%>	
+		<div style="margin-left: 120px">
+				<%= f.radio_button :jeniskelamin, "Pria", required: true %><label style="margin-left: 5px">Pria</label>
+				<%= f.radio_button :jeniskelamin, "Wanita", required: true, style:'margin-left:20px'%><label style="margin-left: 5px">Wanita</label>
+		</div>
+	</div>
+	 
+	<div class="form-group">
+		<%= f.label :alamat %>	
+		<%= f.text_area :alamat, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :No_Telepon %>	
+		<%= f.number_field :notlp, class:'form-control', required: true %>
+	</div>
+	      
+	<div class="form-group">
+		<%= f.label :Email %>	
+		<%= f.email_field :email, class:'form-control', required: true %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Password %>		
+		<%= f.password_field :password, class:'form-control', required: true %>
+	</div>          
+
+		<%= f.submit "Daftar", class:'btn btn-block btn-secondary' %>
+	                	
+	<div class="text-center">
+		<a href="#">Lupa Password</a> or
+		<a href="login">Sign in</a>
+	</div>
+	<% end %>
+</div>

@@ -1,0 +1,151 @@
+<div class="form"> 	
+	<h2 style="color: #624b4b">Daftar Member</h2><hr>
+
+	<%= form_for(@tambah, url: {action: "create"}, method: "post") do |f| %>
+	<div class="form-group">
+		<%= f.label :Kode %>
+		<%= f.text_field :kode, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Jenis_paket %>
+		<%= f.text_field :jenis, class:'form-control', required: true  %>
+	</div>
+	<div class="form-group">
+		<%= f.label :Harga %>
+		<%= f.text_field :harga, class:'form-control', required: true  %>
+	</div>
+	<div class="form-group">
+		<%= f.label :kuota %>
+		<%= f.text_field :kondisi, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_1 %>
+		<%= f.text_field :food1, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_2 %>
+		<%= f.text_field :food2, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_3 %>
+		<%= f.text_field :food3, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_4 %>
+		<%= f.text_field :food4, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_5 %>
+		<%= f.text_field :food5, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_6 %>
+		<%= f.text_field :food6, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_7 %>
+		<%= f.text_field :food7, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_8 %>
+		<%= f.text_field :food8, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_9 %>
+		<%= f.text_field :food9, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_10 %>
+		<%= f.text_field :food10, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Food_11 %>
+		<%= f.text_field :food11, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_12 %>
+		<%= f.text_field :food12, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_13 %>
+		<%= f.text_field :food13, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_14 %>
+		<%= f.text_field :food14, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Food_15 %>
+		<%= f.text_field :food15, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Beverage_1 %>
+		<%= f.text_field :beverage1, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Beverage_2 %>
+		<%= f.text_field :beverage2, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Beverage_3 %>
+		<%= f.text_field :beverage3, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Beverage_4 %>
+		<%= f.text_field :beverage4, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Beverage_5 %>
+		<%= f.text_field :beverage5, class:'form-control', required: true  %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :Dessert_1 %>
+		<%= f.text_field :dessert1, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Dessert_2 %>
+		<%= f.text_field :dessert2, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Dessert_3 %>
+		<%= f.text_field :dessert3, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Dessert_4 %>
+		<%= f.text_field :dessert4, class:'form-control', required: true  %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :Dessert_5 %>
+		<%= f.text_field :dessert5, class:'form-control', required: true  %>
+	</div>
+	
+	<%= f.submit "Tambah", class:'btn btn-block btn-secondary' %>
+	                	
+	<% end %>
+</div>

@@ -1,0 +1,63 @@
+body{
+   	background-image: url(back.jpg);
+}
+
+.form{
+	background: #f8f9fb; 
+	width:50%; 
+	padding:15px;
+	margin: 100px auto;
+}
+
+@media only screen and (max-width: 780px) {
+	.form{
+		background: #f8f9fb; 
+		width:80%; 
+		padding:15px;
+		margin: 100px auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.form{
+		background: #f8f9fb; 
+		width:100%; 
+		padding:15px;
+		margin: 100px auto;
+	}
+}
+
+.keran img {
+	width: 45px;
+	height: 33px;
+}
+
+.col-sm{
+	background: #f8f9fb;
+	margin: 5px;
+	padding: 5px;
+}
+
+.link a {
+	color: black
+}
+
+.logo img {
+	width: 250px;
+	height: 70px;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+
+#collapsibleNavbar a{
+	color: #000
+}

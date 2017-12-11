@@ -1,0 +1,9 @@
+
+<div class="container">
+	<h3>Keranjang Anda</h3>
+	<% @keranjang.each do |p| %>
+		<div><%=p.kategori %></div>
+		<div><%=p.jenispaket %></div>
+		<hr/>
+	<%end%>
+</div>

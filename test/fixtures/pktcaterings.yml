@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kode: MyString
+  jenis: MyString
+  harga: MyString
+  kondisi: MyString
+  food1: MyString
+  food2: MyString
+  food3: MyString
+  food4: MyString
+  food5: MyString
+  food6: MyString
+  food7: MyString
+  food8: MyString
+  food9: MyString
+  food10: MyString
+  food11: MyString
+  food12: MyString
+  food13: MyString
+  food14: MyString
+  food15: MyString
+  beverage1: MyString
+  beverage2: MyString
+  beverage3: MyString
+  beverage4: MyString
+  beverage5: MyString
+  dessert1: MyString
+  dessert2: MyString
+  dessert3: MyString
+  dessert4: MyString
+  dessert5: MyString
+
+two:
+  kode: MyString
+  jenis: MyString
+  harga: MyString
+  kondisi: MyString
+  food1: MyString
+  food2: MyString
+  food3: MyString
+  food4: MyString
+  food5: MyString
+  food6: MyString
+  food7: MyString
+  food8: MyString
+  food9: MyString
+  food10: MyString
+  food11: MyString
+  food12: MyString
+  food13: MyString
+  food14: MyString
+  food15: MyString
+  beverage1: MyString
+  beverage2: MyString
+  beverage3: MyString
+  beverage4: MyString
+  beverage5: MyString
+  dessert1: MyString
+  dessert2: MyString
+  dessert3: MyString
+  dessert4: MyString
+  dessert5: MyString

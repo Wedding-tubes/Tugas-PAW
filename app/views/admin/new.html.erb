@@ -1,0 +1,16 @@
+<div class="form"> 	
+	<h2 style="color: #624b4b">Daftar Admin</h2><hr>
+
+	<%= form_for(@admin, url: {action: "create"}, method: "post") do |f| %>
+		<div class="form-group">
+			<%= f.label :username %>
+			<%= f.text_field :username, class:'form-control', required: true  %>
+		</div>
+
+		<div class="form-group">
+			<%= f.label :password %>
+			<%= f.password_field :password, class:'form-control', required: true  %>
+		</div>
+		<%= f.submit "Daftar", class:'btn btn-block btn-secondary' %>                	
+	<% end %>
+</div>

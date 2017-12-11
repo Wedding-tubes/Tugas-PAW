@@ -1,0 +1,110 @@
+<div class="container">
+<h1 style="margin-bottom: 70px;"><center>Paket Catering</center></h1>
+</div>
+  <div class="container">
+    <div class="row">
+
+        <% @catering.each do |f|%>
+            <div class="col-sm ">
+                <h5><%= f.jenis %></h5>
+                Rp.<%= f.harga %><br/>
+                <p>Condition : <%= f.kondisi %></p>
+                Food :<br/>
+                <li><%= f.food1 %></li>
+                <li><%= f.food2 %></li>
+                <li><%= f.food3 %></li>
+                <li><%= f.food4 %></li>
+                <li><%= f.food5 %></li>
+                <li><%= f.food6 %></li>
+                <li><%= f.food7 %></li>
+                <li><%= f.food8 %></li>
+                <li><%= f.food9 %></li>
+                <li><%= f.food10 %></li>
+                <li><%= f.food11 %></li>
+                <li><%= f.food12 %></li>
+                <li><%= f.food13 %></li>
+                <li><%= f.food14 %></li>
+                <li><%= f.food15 %></li>
+
+
+                Beverage:<br/>
+                <li><%= f.beverage1 %></li>
+                <li><%= f.beverage2 %></li>
+                <li><%= f.beverage3 %></li>
+                <li><%= f.beverage4 %></li>
+                <li><%= f.beverage5 %></li>
+                Dessert :<br/>
+                <li><%= f.dessert1 %></li>
+                <li><%= f.dessert2 %></li>
+                <li><%= f.dessert3 %></li>
+                <li><%= f.dessert4 %></li>
+                <li><%= f.dessert5 %></li>
+                     
+                <% if user = user_login %>
+                    <% nama = user.nama %>
+                    <% kategori = "Catering" %>
+                    <% kodepaket = f.kode%>
+                    <% jenpaket = f.jenis %>
+                    <%= form_for(@keranjang, url: {action: "tmbh"}, method: "post") do |p| %>
+                        <div style="display: none;">
+                            <%= p.text_field :namauser, :value => nama %>
+                            <%= p.text_field :kategori, :value => kategori %>
+                            <%= p.text_field :kodepaket, :value => kodepaket %>
+                            <%= p.text_field :jenispaket, :value => jenpaket %>
+                        </div>
+                        <%= p.submit "Keranjang", class:'btn btn-block btn-secondary'%>
+                        <a href="login">Pesan Sekarang</a>
+                    <% end %>
+                <%else%>
+                    <a href="login">Pesan Sekarang</a>
+                <%end%>              
+
+            </div>
+        <% end %>
+
+      <div class="col-sm ">
+        <h5>Paket Silver</h5>
+        Rp. <br>
+        <p>Condition : Min 400 Pax</p>
+        Food :<br>
+        1. Aneka Soup<br>
+        2. Aneka Tumisan<br>
+        3. Mie Goreng<br>
+        4. Aneka Olahan Ayam<br>
+        5. Aneka Olahan Daging<br>
+        6. Nasi Putih<br>
+        7. Nasi Kebuli<br>
+        <p>8. Kerupuk Udang</p>
+        Beverages :<br>
+        Aneka Es Buah<br>
+        <p>Air Mineral</p>
+        Desserts : <br>
+        Buah Potong<br>
+        Puding Potong<br>
+      </div>s
+
+      <div class="col-sm ">
+       <h5>Paket Platinum</h5>
+        Rp. 500<br>
+        <p>Condition : Min 500 Pax</p>
+        Food :<br>
+        1. Aneka Soup<br>
+        2. Aneka Tumisan<br>
+        3. Sambal Goreng Ati<br>
+        4. Aneka Olahan Ayam Spesial<br>
+        5. Aneka Olahan Daging Spesial<br>
+        6. Aneka Olahan Ikan<br>
+        7. Nasi Putih<br>
+        8. Nasi Kebuli<br>
+        <p>9. Kerupuk Udang</p>
+        Beverages :<br>
+        Aneka Es Buah<br>
+        Juice<br>
+        <p>Air Mineral</p>
+        Desserts :<br>
+        Buah Potong<br>
+        Puding Potong<br>
+        Salad Buah dan Sayur<br></div>
+    </div>  
+  </div>
+</div>
