@@ -1,17 +1,12 @@
 language: ruby
 rvm:
   - 2.3.3
-env: 
-  - RAILS_ENV=test
-before_script:
-  - "mysql -e 'create database my_app_test;'"
-  - "cp config/.travis.database.yml config/database.yml"
-script: 
-  - bundle exec rake db:schema:load
+env:
+  - DB=mysql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
-  - bundle exec rake spec
-after_failure:
-  - "mysql -e 'show databases;'"
-  - "cat ./config/database.yml"
-  - "echo $RAILS_ENV"
-  - "bundle exec rake --version"
+  - bundle exec rake
+before_script:
+  - cp config/database.travis.yml config/database.yml
+bundle_args: --binstubs=./bundler_stubs
