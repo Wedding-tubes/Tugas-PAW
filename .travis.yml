@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - "2.4.1"
+env:
+  - DB=mysql
+script: 
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+
+before_script:
+  - mysql -e 'create database wedding_test'
+
+test:
+  adapter: mysql2
+  database: wedding_test
+  username: travis
+  encoding: utf8
